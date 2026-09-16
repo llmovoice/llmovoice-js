@@ -1,0 +1,40 @@
+{
+  "name": "@llmovoice/twilio",
+  "version": "0.1.0",
+  "description": "Twilio Voice, SIP, and SMS adapters for llmovoice",
+  "license": "Apache-2.0",
+  "keywords": ["twilio", "sip", "telephony", "sms", "voice", "llm"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llmovoice/llmovoice-js.git",
+    "directory": "packages/twilio"
+  },
+  "homepage": "https://llmovoice.com",
+  "bugs": { "url": "https://github.com/llmovoice/llmovoice-js/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20" },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@llmovoice/core": "workspace:*",
+    "@llmovoice/runtime": "workspace:*"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

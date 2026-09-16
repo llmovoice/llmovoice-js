@@ -1,0 +1,9 @@
+project_id = "llmovoice"
+
+[api]
+enabled = true
+schemas = ["public", "graphql_public", "llmovoice"]
+extra_search_path = ["public", "extensions"]
+
+[db]
+major_version = 17

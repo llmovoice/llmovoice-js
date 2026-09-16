@@ -1,0 +1,41 @@
+{
+  "name": "@llmovoice/postgres",
+  "version": "0.1.0",
+  "description": "Production PostgreSQL context store for llmovoice",
+  "license": "Apache-2.0",
+  "keywords": ["postgresql", "llm", "voice", "context", "storage", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llmovoice/llmovoice-js.git",
+    "directory": "packages/postgres"
+  },
+  "homepage": "https://llmovoice.com",
+  "bugs": { "url": "https://github.com/llmovoice/llmovoice-js/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20" },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --external pg",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@llmovoice/core": "workspace:*",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.15.5",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

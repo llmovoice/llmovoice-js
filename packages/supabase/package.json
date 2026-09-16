@@ -1,0 +1,43 @@
+{
+  "name": "@llmovoice/supabase",
+  "version": "0.1.0",
+  "description": "Supabase Auth, RLS, and pgvector context store for llmovoice",
+  "license": "Apache-2.0",
+  "keywords": ["supabase", "postgresql", "pgvector", "voice", "context", "typescript"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llmovoice/llmovoice-js.git",
+    "directory": "packages/supabase"
+  },
+  "homepage": "https://llmovoice.com",
+  "bugs": { "url": "https://github.com/llmovoice/llmovoice-js/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20" },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean --external @supabase/supabase-js",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@supabase/supabase-js": ">=2.90.0 <3"
+  },
+  "dependencies": {
+    "@llmovoice/core": "workspace:*"
+  },
+  "devDependencies": {
+    "@supabase/supabase-js": "^2.110.8",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

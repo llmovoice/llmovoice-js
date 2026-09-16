@@ -1,0 +1,42 @@
+{
+  "name": "@llmovoice/providers",
+  "version": "0.1.0",
+  "description": "Mainland China model and realtime voice providers for llmovoice",
+  "license": "Apache-2.0",
+  "keywords": ["qwen", "glm", "baidu", "minimax", "deepseek", "doubao", "hunyuan", "realtime", "voice"],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/llmovoice/llmovoice-js.git",
+    "directory": "packages/providers"
+  },
+  "homepage": "https://llmovoice.com",
+  "bugs": { "url": "https://github.com/llmovoice/llmovoice-js/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20" },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@llmovoice/core": "workspace:*",
+    "@llmovoice/runtime": "workspace:*",
+    "ws": "^8.21.1"
+  },
+  "devDependencies": {
+    "@types/ws": "^8.18.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}

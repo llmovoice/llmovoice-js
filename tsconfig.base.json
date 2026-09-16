@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@llmovoice/core": ["packages/core/src/index.ts"],
+      "@llmovoice/runtime": ["packages/runtime/src/index.ts"],
+      "@llmovoice/openai": ["packages/openai/src/index.ts"],
+      "@llmovoice/providers": ["packages/providers/src/index.ts"],
+      "@llmovoice/twilio": ["packages/twilio/src/index.ts"],
+      "@llmovoice/react": ["packages/react/src/index.ts"],
+      "@llmovoice/postgres": ["packages/postgres/src/index.ts"],
+      "@llmovoice/supabase": ["packages/supabase/src/index.ts"]
+    },
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "declaration": true,
+    "sourceMap": true
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">llmovoice icon</title>
+  <path d="M15 0H49A15 15 0 0 1 64 15V49A15 15 0 0 1 49 64H15A15 15 0 0 1 0 49V15A15 15 0 0 1 15 0Z" fill="#070b0a" />
+  <g fill="#5ed29c">
+    <rect x="15" y="27.5" width="4" height="9" rx="2" />
+    <rect x="23" y="21.5" width="4" height="21" rx="2" />
+    <rect x="31" y="15" width="4" height="34" rx="2" />
+    <rect x="39" y="21.5" width="4" height="21" rx="2" />
+    <rect x="47" y="27.5" width="4" height="9" rx="2" />
+  </g>
+</svg>

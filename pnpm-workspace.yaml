@@ -1,0 +1,9 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+allowBuilds:
+  esbuild: true
+  sharp: true
+overrides:
+  postcss: 8.5.21
+  sharp: 0.35.3
